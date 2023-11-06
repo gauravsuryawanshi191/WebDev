@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form method="post">
+        <table border="2">
+            <tr>
+                <td>Name</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Employee Code</td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>Department</td>
+                <td ><input type="radio" id="admin" value="ADMIN">
+                    <label for="admin">ADMIN</label>
+                    <input type="radio" id="hr" value="HR">
+                    <label for="hr">HR</label>
+                    <input type="radio" id="technical" value="TECHNICAL">
+                    <label for="technical">TECHNICAL</label>
+                    <input type="radio" id="accounts" value="ACCOUNTS">
+                    <label for="accounts">ACCOUNTS</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Date Of Joining</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Training Program Attended</td>
+                <td>
+                    <div id="checkboxes">
+                        <input type="checkbox" id="html" value="HtML">
+                        <label for="html">HTML/DHTML</label>
+                        <input type="checkbox" id="java" value="JAVA">
+                        <label for="java">JAVA</label>
+                        <input type="checkbox" id="client" value="Client">
+                        <label for="client">CLIENT/SERVER</label>
+                        <input type="checkbox" id="net" value=".NET">
+                        <label for="net">.NET</label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

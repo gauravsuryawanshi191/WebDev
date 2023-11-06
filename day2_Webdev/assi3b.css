@@ -5,30 +5,49 @@ header{
     margin: 10px;
 }
 nav{
+    width: 100%;
     background-color: aquamarine;
     display: flex;
 }
 .tab{
-    width: 200px;
+    width: 100px;
     height: 50px;
     margin-left: 10px;
     margin-right: 10px;
     padding: 10px;
 }
 #date{
-    text-align-last: right;
+    margin-top: 10px;
+    text-align: end;
 }
 table{
+    margin-top: 20px;
     width: 100%;
+    background-color: rgb(221, 246, 237);
+}
+.time{
+    background-color: aquamarine;
+}
+.room{
     background-color: aquamarine;
 }
 #info{
     display: flex;
 }
+#contact{
+    width: 700px;
+}
 #capacity{
     margin: 20px;
+    margin-right: 100px;
+    margin-left: 200px;
     padding: 10px;
     width: 500px;
     border: 2px solid red;
     border-radius: 10px;
+}
+footer{
+    height: 30px;
+    background-color: aquamarine;
+    text-align: center;
 }
