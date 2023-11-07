@@ -1,0 +1,28 @@
+#box{
+    border: 2px solid black;
+    padding: 10px;        
+}
+#section1{
+    display: flex;
+}
+#section2{
+    display: flex;
+}
+#img1{
+    position: static;
+    flex-grow: 3;
+    margin-left: 10px;
+    height: 150px;
+    width: 200px;
+    position: relative;
+}
+#img2{
+    margin-left: 10px;
+    flex-grow: 2;
+    height: 300px;
+    width: 200px;
+}
+p{
+    flex-basis: 5px;
+    flex-grow: 3;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <link rel="stylesheet" href="css/assi5.css">
 </head>
 <body>
     <form method="post">
@@ -18,13 +19,13 @@
             </tr>
             <tr>
                 <td>Department</td>
-                <td ><input type="radio" id="admin" value="ADMIN">
-                    <label for="admin">ADMIN</label>
-                    <input type="radio" id="hr" value="HR">
-                    <label for="hr">HR</label>
-                    <input type="radio" id="technical" value="TECHNICAL">
-                    <label for="technical">TECHNICAL</label>
-                    <input type="radio" id="accounts" value="ACCOUNTS">
+                <td id="departoption"><input type="radio" id="admin" name="department" value="ADMIN">
+                    <label for="admin">ADMIN</label> <br>                 
+                    <input type="radio" id="hr" name="department" value="HR">
+                    <label for="hr">HR</label> <br>
+                    <input type="radio" id="technical" name="department" value="TECHNICAL">
+                    <label for="technical">TECHNICAL</label> <br>
+                    <input type="radio" id="accounts" name="department" value="ACCOUNTS">
                     <label for="accounts">ACCOUNTS</label>
                 </td>
             </tr>
@@ -34,22 +35,36 @@
             </tr>
             <tr>
                 <td>Address</td>
-                <td><input type="text"></td>
+                <td><textarea name="address" id="address" cols="30" rows="2"></textarea></td>
             </tr>
             <tr>
                 <td>Training Program Attended</td>
-                <td>
+                <td id="Programoption">
                     <div id="checkboxes">
                         <input type="checkbox" id="html" value="HtML">
-                        <label for="html">HTML/DHTML</label>
+                        <label for="html">HTML/DHTML</label><br>
                         <input type="checkbox" id="java" value="JAVA">
-                        <label for="java">JAVA</label>
+                        <label for="java">JAVA</label><br>
                         <input type="checkbox" id="client" value="Client">
-                        <label for="client">CLIENT/SERVER</label>
+                        <label for="client">CLIENT/SERVER</label><br>
                         <input type="checkbox" id="net" value=".NET">
                         <label for="net">.NET</label>
                     </div>
                 </td>
+            </tr>
+            <tr>
+                <td>Training Programmes need to attend</td>
+                <td>
+                    <select name="programme" id="programme" size="2">
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="java">java</option>
+                        <option value="css">CSS</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Send the Information at</td>
+                <td><a href="empinfo@patni.com">empinfo@patni.com</a></td>
             </tr>
         </table>
     </form>
