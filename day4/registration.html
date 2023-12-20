@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./reg.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <form method="get" onsubmit="return validateData()">
+            <tr>
+                <td><label for="nm">Name</label></td>
+                <td><input type="text" id="nm" name="nm" autofocus required maxlength="10"/><td id="errnm" name="errnm" style="color: red;"></td></td>
+                
+            </tr>
+            <tr>
+                <td><label for="age">Age</label></td>
+                <td><input type="number" id="age" name="age" required min="18" max="35"/></td>
+            </tr>
+            <tr>
+                <td><label for="dept">Department</label></td>
+                <td><input type="text" id="dept" name="dept" required/></td>
+            </tr>
+            <tr>
+                <td><label for="sex">Gender</label></td>
+                <td><input type="radio" name="sex" id="male" value="Male">Male</input>
+                <td><input type="radio" name="sex" id="female" value="Female">Female</input>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="hob">Hobbies</label></td>
+                <td><input type="checkbox" name="hob" id="eat" value="Eating">Eating</input</td>
+                <td><input type="checkbox" name="hob" id="read" value="Reading">Reading</input</td> 
+            </tr>
+            <tr> 
+                <td><label for="hob"></label></td>
+                <td><input type="checkbox" name="hob" id="sleep" value="Sleeping">Sleeping</input</td>
+                <td><input type="checkbox" name="hob" id="relax" value="Relaxing">Relaxing</input</td>
+            </tr>
+
+            <tr>
+                <td><label for="deg">Degree</label></td>
+                <td><input type="radio" name="deg" id="be" value="BE"/>BE</td>
+                <td><input type="radio" name="deg" id="me" value="ME"/>ME</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="radio" name="deg" id="bt" value="BTECH"/>BTECH</td>
+                <td><input type="radio" name="deg" id="mt" value="MTECH"/>MTECH</td>
+            </tr>
+            <tr>
+                <td><label for="city">City</label></td>
+                <td><select name="city" id="city">
+                    <option value="any">Select a City</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Pune">Gwalior</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" name="register" id="register" value="Register">Register</button></td>
+                <td><Button type="reset" name="reset" id="reset" value="Reset">Reset</Button></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
