@@ -11,12 +11,14 @@
         <form method="get" onsubmit="return validateData()">
             <tr>
                 <td><label for="nm">Name</label></td>
-                <td><input type="text" id="nm" name="nm" autofocus required maxlength="10"/><td id="errnm" name="errnm" style="color: red;"></td></td>
+                <td><input type="text" id="nm" name="nm" autofocus required maxlength="10"/></td>
+                <td id="nmerr" name="nmerr" style="color: red;"></td>
                 
             </tr>
             <tr>
                 <td><label for="age">Age</label></td>
-                <td><input type="number" id="age" name="age" required min="18" max="35"/></td>
+                <td><input type="number" id="age" name="age" required/></td>
+                <td id="ageerr" name="ageerr" style="color: red;"></td>
             </tr>
             <tr>
                 <td><label for="dept">Department</label></td>
@@ -27,6 +29,7 @@
                 <td><input type="radio" name="sex" id="male" value="Male">Male</input>
                 <td><input type="radio" name="sex" id="female" value="Female">Female</input>
                 </td>
+                <td id="sexerr" name="sexerr" style="color: red;"></td>
             </tr>
             <tr>
                 <td><label for="hob">Hobbies</label></td>
