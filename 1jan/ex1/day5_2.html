@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day5_2</title>
+    <style>
+        #nameerr {
+            color: red;
+        }
+
+        #passerr {
+            color: red;
+        }
+    </style>
+    <script>
+        function validateName() {
+            var name = document.getElementById("uname").value;
+            if (name.length < 5) {
+                document.getElementById("nameerr").innerHTML = "Name can't be less than 5char";
+                document.getElementById("uname").focus();
+                document.getElementById("uname").select();
+            }
+            else {
+                document.getElementById("p1").innerHTML = name;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to JS</h1>
+    <form>
+        Username:<input name="uname" id="uname" onchange="validateName()"> <span id="nameerr"></span>
+        <p>
+            Password:<input name="pass" id="pass" type="password"> <span id="passerr"></span>
+        <p>
+            <input type="submit" value="Login">
+    </form>
+    Hello <span id="p1"></span>
+</body>
+
+</html>

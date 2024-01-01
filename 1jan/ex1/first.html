@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            var name= document.getElementById("t1").value;
+            var e1= new Emp(name);
+            e1.displayDetails();
+        }
+        class Emp{
+            constructor(name){
+                this.name=name;
+            }
+            displayDetails(){
+                document.write("Name:"+this.name)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Hello there...</h1>
+    username:<input id="t1">
+    <input type= "button" value="login" onclick="f1()">
+</body>
+</html>

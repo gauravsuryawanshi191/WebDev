@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day5_1</title>
+    <style>
+        #nameerr {
+            color: red;
+        }
+
+        #passerr {
+            color: red;
+        }
+    </style>
+    <script>
+        function validateName() {
+            var name = document.getElementById("uname").value;
+            // if (name == null || name == "") {
+            //     // alert("Name is Mandatory Field")
+            //     // document.getElementById("uname").focus();
+            //     document.getElementById("nameerr").innerHTML = "*Name is Mandatory Field";
+            //     return false;
+            // }
+            if (name.length < 5) {
+                // alert("Name must be min 5 character")
+                // document.getElementById("uname").focus();
+                // document.getElementById("uname").select();
+                document.getElementById("nameerr").innerHTML = "*Name must be min 5 character";
+                return false;
+            }
+            // else if (!isNaN(name)) {
+            //     document.getElementById("nameerr").innerHTML = "*Name cant be Numeric";
+            // }
+            else {
+                document.getElementById("nameerr").innerHTML = "";
+                document.getElementById("p1").innerHTML = name;
+                return true;
+            }
+        }
+        function validatePass() {
+            var pass = document.getElementById("pass").value;
+            // if (pass == null || pass == "") {
+            //     // alert("Name is Mandatory Field")
+            //     // document.getElementById("uname").focus();
+            //     document.getElementById("passerr").innerHTML = "*Password is Mandatory Field";
+            //     return false;
+            // }
+            if (pass.length < 5 || pass.length > 10) {
+                // alert("Name must be min 5 character")
+                // document.getElementById("uname").focus();
+                // document.getElementById("uname").select();
+                document.getElementById("passerr").innerHTML = "*Pass must be Correct Length";
+                return false;
+            }
+            // else if (!isNaN(name)) {
+            //     document.getElementById("nameerr").innerHTML = "*Name cant be Numeric";
+            // }
+            else {
+                document.getElementById("passerr").innerHTML = "";
+                document.getElementById("p1").innerHTML = name;
+                return true;
+            }
+        }
+        function validateForm() {
+            if (validateName() && validatePass())
+                return true;
+            else
+                return false;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to JS</h1>
+    <form onsubmit="return validateForm()">
+        Username:<input name="uname" id="uname" required> <span id="nameerr"></span>
+        <p>
+            Password:<input name="pass" id="pass" type="password" required> <span id="passerr"></span>
+        <p>
+            <input type="submit" value="Login">
+    </form>
+    Hello <span id="p1"></span>
+</body>
+
+</html>
