@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <script src="..\scripts\jquery-3.7.1.js"></script>
+    <script>
+        var name, orderno, ordertotal, bdate, sdate
+        $(document).ready(function () {
+            function nameValidate() {
+                orderno = $("orderno").val();
+                name = $("#name").val();
+                ordertotal = $("#ordertotal").val();
+                if (name.length < 6) {
+                    $("#name").append("<span>  Not Valid</span>");
+                    return false;
+                }
+                else
+                    return true;
+            }
+            function dateValidate() {
+                bdate = new Date($("#bdate").val());
+                sdate = new Date($("#sdate").val());
+                alert(sdate.getTime() - ddate.getTime())
+                if (bdate.getTime() - sdate.getTime() > 0) {
+                    $("#sdate").append("<span>  Enter Valid Dates</span>");
+                    return false;
+                }
+                else
+                    return true;
+
+            }
+            $("#btn").on("click", function () {
+                if (nameValidate() && dateValidate()) {
+                    var data = orderno + "<br/>" + name + "<br/>" + ordertotal + "<br/>" + bdate + "<br/>" + sdate;
+                    $("#data").html(data);
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <form>
+        Orderno: <input type="text" id="orderno"><br>
+        cust Name: <input type="text" id="name"><br>
+        billing date: <input type="date" id="bdate"><br>
+        shipping date: <input type="date" id="sdate"><br>
+        order total: <input type="text" id="ordertotal"><br>
+        <button id="btn">Submit</button><br>
+    </form>
+    <div id="data"></div>
+</body>
+
+</html>

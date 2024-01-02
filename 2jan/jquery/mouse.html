@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseEvents</title>
+    <style>
+        .highlight {
+            background-color: gold;
+        }
+    </style>
+    <script src="..\scripts\jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#targetdiv").mouseover(function () {
+                toggle(this)
+            })
+            $("#targetdiv").mouseleave(function () {
+                toggle(this)
+            })
+            $("#targetdiv").mouseup(function (e) {
+                $(this).text("X: " + e.pageX + " Y: " + e.pageY);
+            })
+        })
+        function toggle(element) {
+            $(element).toggleClass("highlight");
+        }
+    </script>
+</head>
+
+<body>
+    <div id="targetdiv">
+        Welcome to JQUERY
+    </div>
+</body>
+
+</html>

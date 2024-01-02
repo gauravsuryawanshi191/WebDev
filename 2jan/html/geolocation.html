@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geolocation</title>
+    <script>
+        var x = document.getElementById("div");
+        function getLocation() {
+            if (navigator.geolocation)
+                navigator.geolocation.getCurrentPosition(showPosition);
+            else
+                x.innerHTML = "Geolocation not supported";
+        }
+        function showPosition(position) {
+            var latitude= position.coords.latitude;
+            var longitude= position.coords.longitude;
+            x.innerHTML = latitude+""+longitude;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div"></div>
+    <button onclick="getLocation()">GET Location</button>
+</body>
+
+</html>
