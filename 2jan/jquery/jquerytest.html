@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquertest</title>
+    <script src="..\scripts\jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            var plist = $("div p");
+            // plist.each(function () {
+            //     console.log($(this).html())
+            // })
+            // plist.each(function(index,element){
+            //     console.log(index+1+" "+$(element).html())
+            // })
+            plist.each(function(index,element){
+                $("#ans").html(index+1+" "+$(element).html())
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1>JQUERY TEST</h1>
+    <div>
+        <p>First</p>
+        <p id="p2">Second</p>
+        <p>Third</p>
+        <p>Fourth</p>
+    </div>
+    <h2 class="c3">End</h2>
+    <button id="btn">Change</button>
+    <div id="ans"></div>
+</body>
+
+</html>

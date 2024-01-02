@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquertest</title>
+    <style>
+        .end{
+            color: brown;
+            background-color: aqua;
+        }
+    </style>
+    <script src="..\scripts\jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            var i=4;
+            $("#btn").click(function () {
+                $("p:first").append("<br/><span>This is First Para</span>")
+                $("p:eq(2)").prepend("<br/><span>This is before third Para</span><br/>")
+                $("p:first").wrap("<h1></h1>")
+            })
+            $("#btn2").click(function () {
+                var next= i+1;
+                $("p:last").append("<br/><p>"+next+"</p>")
+                i++
+            })
+            $("#btn3").click(function () {
+                $("#c3").addClass("end")
+            })
+            $("#btn4").click(function () {
+                $("#c3").removeClass("end")
+            })
+            $("#btn5").click(function () {
+                $("#c3").toggleClass("end");
+            })
+            $("#c3").mouseover(function(){
+                $("#c3").css("opacity","0.5")
+            })
+            $("#c3").mouseleave(function(){
+                $("#c3").css("opacity","1")
+            })
+            $("#btn6").click(function () {
+                $("h1").hide(2000);
+            })
+            $("#btn7").click(function () {
+                $("h1").show(500);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    
+    <div>
+        <p>First</p>
+        <p id="p2">Second</p>
+        <p>Third</p>
+        <p>Fourth</p>
+    </div>
+    <h2 id="c3">End</h2>
+    <button id="btn">Change</button>
+    <button id="btn2">add next</button>
+    <button id="btn3">add style to end</button>
+    <button id="btn4">remove style of end</button>
+    <button id="btn5">toggle style of end</button><br>
+    <button id="btn6">Hide Header</button>
+    <button id="btn7">Show Header</button>
+    <div id="ans"></div>
+    <h1>JQUERY TEST</h1>
+</body>
+
+</html>

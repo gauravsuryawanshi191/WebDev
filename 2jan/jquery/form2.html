@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="..\scripts\jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                var name = $("#name").val();
+                var age = $("#age").val();
+                var city= $("#city").val();
+                alert(name + " " + age+" "+city);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    Name: <input type="text" id="name" value="Surya"><br>
+    Age: <input type="text" id="age"><br>
+    City:
+    <select id="city">
+        <option value="Pune" selected="selected">Pune</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bengaluru">Bengaluru</option>
+    </select><br>
+    <input type="radio" value="radio">
+    <button id="btn"> submit</button>
+</body>
+
+</html>
