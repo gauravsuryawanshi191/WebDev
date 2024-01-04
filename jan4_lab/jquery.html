@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #myButton {
+            margin: 20px;
+        }
+
+        #myDiv {
+            display: none;
+            position: absolute;
+            top: 10;
+            left: 10;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="myButton">Click me</button>
+    <div id="myDiv">This is the div block</div>
+
+    <script>
+        $(document).ready(function () {
+            $('#myButton').click(function () {
+                $('#myDiv').show().position({
+                    my: "left top",
+                    at: "right top",
+                    of: this
+                });
+            });
+
+            $('#myDiv').mouseenter(function () {
+                $(this).insertAfter('#myButton');
+            });
+
+            $('#myDiv').mouseleave(function () {
+                $(this).appendTo('body');
+            });
+            // $('#myDiv').hover(function () {
+            //     $(this).insertAfter('#myButton');
+            // }, function () {
+            //     $(this).appendTo('body');
+            // });
+        });
+    </script>
+</body>
+
+</html>
