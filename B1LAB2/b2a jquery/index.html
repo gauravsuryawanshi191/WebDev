@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h2 class="mb-4">Book Details</h2>
+
+    <form id="bookForm">
+      <div class="form-group">
+        <label for="bookName">Book Name:</label>
+        <input type="text" class="form-control" id="bookName" name="bookName" required minlength="3">
+      </div>
+
+      <div class="form-group">
+        <label for="author">Author:</label>
+        <input type="text" class="form-control" id="author" name="author" required>
+      </div>
+
+      <div class="form-group">
+        <label for="publishingDate">Publishing Date:</label>
+        <input type="date" class="form-control" id="publishingDate" name="publishingDate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" class="form-control" id="price" name="price" required min="201">
+      </div>
+
+      <div class="form-group">
+        <label>Languages:</label><br>
+        <div class="form-check form-check-inline">
+          <input type="checkbox" class="form-check-input" id="hindi" name="language" value="Hindi"> Hindi
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="checkbox" class="form-check-input" id="english" name="language" value="English"> English
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="checkbox" class="form-check-input" id="marathi" name="language" value="Marathi"> Marathi
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="showBookDetails()">Show Book Details</button>
+    </form>
+
+    <h2 class="mt-4">Book Details Table</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Book Name</th>
+          <th scope="col">Author</th>
+          <th scope="col">Publishing Date</th>
+          <th scope="col">Price</th>
+          <th scope="col">Language</th>
+        </tr>
+      </thead>
+      <tbody id="bookDetailsTable"></tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
