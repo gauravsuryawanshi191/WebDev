@@ -1,0 +1,54 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h2>Employee App</h2>
+
+  <div class="employeeForm">
+    <label for="employeeName">Employee Name:</label>
+    <input type="text" id="employeeName" /><br/>
+  
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" /><br/>
+  
+    <div class="labelDiv">
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="male" /> Male
+      <input type="radio" name="gender" value="female" /> Female
+      <br/>
+    </div>
+    
+    <div class="labelDiv">
+      <label>Languages:</label>
+      <input type="checkbox" name="language" value="hindi" /> Hindi
+      <input type="checkbox" name="language" value="english" /> English
+      <input type="checkbox" name="language" value="marathi" /> Marathi
+      <br/>
+    </div>
+    
+    <button id="showDetails">Show Employee Details</button>
+  </div>
+
+  <table id="employeeTable">
+    <thead>
+      <tr>
+        <th>Employee Name</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Languages</th>
+      </tr>
+    </thead>
+    <tbody id="employeeDetailsBody"></tbody>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="employeeApp.js"></script>
+</body>
+</html>
